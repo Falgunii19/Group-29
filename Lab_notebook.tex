@@ -187,6 +187,90 @@ Roll No :- 30001223031
 \end{figure}
 \subsection*{Installation}
 \paragraph{Installing GitHub Desktop is a straightforward process that enhances your workflow by providing a user-friendly interface for managing repositories. To begin, download the installer from the [official GitHub Desktop website](https://desktop.github.com/) for your operating system—Windows or macOS. After downloading, simply run the installer and follow the on-screen instructions to complete the setup. Once installed, you can launch the application and sign in with your GitHub credentials, or create a new account if needed. GitHub Desktop streamlines the process of cloning repositories, making commits, and managing branches, making it an invaluable tool for developers of all skill levels. For Linux users, alternative methods like using Wine or other Git clients are available.}
+
+\newpage
+
+\begin{tikzpicture}
+[remember picture, overlay] \draw[line width = 2pt] ($(current page.north west) + (0.5in, -0.5in)$) rectangle ($(current page.south east) + (-0.5in, 0.5in)$);
+\end{tikzpicture}
+
+\section*{Building a C programme of calculator in the local repository,committing and publishing it as a public repository.}
+\vspace{1cm}
+Building a C program for a calculator and managing it with GitHub Desktop involves a few straightforward steps. First, write the C program that performs basic arithmetic operations like addition, subtraction, multiplication, and division. Once your program is complete, you can manage and publish it using GitHub Desktop.
+\vspace{1.5cm}
+\textbf{1. Set Up Your Project Locally:} Create a folder on your computer to store your C program files. Place all the related files inside this folder.
+\vspace{1.5cm}
+\textbf{2.Initialize a Repository in GitHub Desktop:}
+    - Open GitHub Desktop and go to "File" > "New Repository".
+    - Choose the local folder where your C program is stored.
+    - Name your repository, add a description if needed, and choose whether to initialize it with a README file.
+\vspace{1.5cm}
+\textbf{3.Commit Your Code:}
+    - In GitHub Desktop, you’ll see any uncommitted changes in your repository. Write a commit message that describes your changes (e.g., "Initial commit of calculator program") and click "Commit to main" (or the appropriate branch name).
+\vspace{1.5cm}
+\textbf{4.Publish Your Repository:}
+    - After committing your changes, click "Publish repository" in the top bar.
+    - Choose whether you want the repository to be public or private, then click "Publish repository".
+\vspace{1.5cm}
+Your C program is now available on GitHub as a public repository, making it accessible to others who can view, download, or contribute to your project. This process allows you to manage your code using a graphical interface without needing to use Git commands in the terminal.
+
+\newpage
+
+\begin{tikzpicture}
+[remember picture, overlay] \draw[line width = 2pt] ($(current page.north west) + (0.5in, -0.5in)$) rectangle ($(current page.south east) + (-0.5in, 0.5in)$);
+\end{tikzpicture}
+
+
+\title{C Program for a Calculator}
+\author{Your Name}
+\date{\today}
+\maketitle
+
+\section{C Code}
+\begin{lstlisting}
+#include <stdio.h>
+
+int main() {
+    char operator;
+    double num1, num2, result;
+
+    // Prompt user for the operation
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &operator);
+
+    // Prompt user for the numbers
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    // Perform the chosen operation
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, result);
+            break;
+        case '/':
+            if (num2 != 0) {
+                result = num1 / num2;
+                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, result);
+            } else {
+                printf("Error! Division by zero is not allowed.\n");
+            }
+            break;
+        default:
+            printf("Error! Operator is not correct\n");
+    }
+
+    return 0;
+}
+\end{lstlisting}
 \newpage
 
 \begin{tikzpicture}
